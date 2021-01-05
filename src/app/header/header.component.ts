@@ -1,29 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { HeaderService } from './header.service';
+
 @Component({
 	selector: 'app-header',
 	templateUrl: './header.component.html',
 	styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-	public nowMidasi: string = "Welcome to NgoNgoPark";
-
-	private midasi: { [key: string]: string; } = {
-		"apis": "Utility APIs over view!",
-		"submit": "Submit Page Here!",
-		"ranking": "Tsuyo Tsuyo Ojisan Ranking!",
-		"top-page": "Welcome to NgoNgoPark!",
-	};
-
-	constructor(private router: Router) { }
+	constructor(private router: Router,
+		public headerService: HeaderService
+	) { }
 
 	ngOnInit(): void {
+		this.headerService.setMidasi("top-page");
 	}
 
-	linksOnclick(page: string): void {
-		this.nowMidasi = this.midasi[page];
-		this.router.navigate([page]);
-	}
+	// linksOnclick(page: string): void {
+	// 	this.nowMidasi = this.midasi[page];
+	// 	this.router.navigate([page]);
+	// }
 
 }

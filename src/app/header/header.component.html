@@ -3,11 +3,11 @@
 		<nav>
 			<div id="header-logo"><img
 					src="https://bn1302files.storage.live.com/y4m3Q1IDqGkArn6zVXJCNK9GwiBSC6j9O-3GtaGe6N7r70E5e4wu6PQXr5zqM4jX7GDuZjHe5S5vUgqZ-wT98AVtmOuKTGxe55kfCHM0ODlO_9Ke7QiosYHgDOAGscbRmgBNIfiDhs6vhx2w438ntSQKNiocsu4rwhB8Dpj2-EZrOip2aXHpIScE0zlaiZ-3Kc505m0E1eXCqm08QthN2bLnQ/Icon1.png?psid=1&width=128&height=128&cropMode=center"
-					(click)="linksOnclick('top-page')">
+					routerLink="top-page">
 			</div>
 
 			<ul>
-				<!-- <li routerLink="apis">
+				<li routerLink="apis">
 					<div class="header-dashboard">APIs</div>
 				</li>
 				<li routerLink="submit">
@@ -15,8 +15,8 @@
 				</li>
 				<li routerLink="ranking">
 					<div class="header-dashboard">Ranking</div>
-				</li> -->
-				<li (click)="linksOnclick('apis')">
+				</li>
+				<!-- <li (click)="linksOnclick('apis')">
 					<div class="header-dashboard">APIs</div>
 				</li>
 				<li (click)="linksOnclick('submit')">
@@ -24,11 +24,11 @@
 				</li>
 				<li (click)="linksOnclick('ranking')">
 					<div class="header-dashboard">Ranking</div>
-				</li>
+				</li> -->
 			</ul>
 		</nav>
 	</div>
 </div>
 <div class="dummy-header"></div>
 
-<app-ngongo-park [ngongotext]="nowMidasi"></app-ngongo-park>
+<app-ngongo-park [ngongotext]="headerService.nowMidasi"></app-ngongo-park>

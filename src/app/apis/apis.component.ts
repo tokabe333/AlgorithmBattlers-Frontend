@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
+import { HeaderService } from '../header/header.service';
+
 @Component({
-  selector: 'app-apis',
-  templateUrl: './apis.component.html',
-  styleUrls: ['./apis.component.scss']
+	selector: 'app-apis',
+	templateUrl: './apis.component.html',
+	styleUrls: ['./apis.component.scss']
 })
 export class APIsComponent implements OnInit {
 
-  constructor() { }
+	constructor(
+		private headerService: HeaderService
+	) { }
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+		this.headerService.setMidasi("apis");
+	}
 
 }
