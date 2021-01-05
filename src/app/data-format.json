@@ -1,0 +1,20 @@
+[
+	{
+		"name": "tourist",
+		"affiliation": "Univ",
+		"Rate":  4098,
+		"Ranking": 1,
+		"submit_id": 24,
+		"timestamp":"2021:01:05_23:28:30",
+		"source": "http://160.251.20.191/AIbattle/Sources/24"
+	},
+	{
+		"name": "wai",
+		"affiliation": "Oshima Syousen",
+		"Rate":  1919,
+		"Ranking": 334,
+		"submit_id": 810,
+		"timestamp":"2021:01:05_23:34:21",
+		"source": "http://160.251.20.191/AIbattle/Sources/810"
+	}
+]
