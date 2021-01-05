@@ -9,6 +9,7 @@ import { RankingComponent } from './ranking/ranking.component';
 import { TopPageComponent } from './top-page/top-page.component';
 import { H2ComponentComponent } from './tools/h2-component/h2-component.component';
 import { APIsComponent } from './apis/apis.component';
+import { NgongoParkComponent } from './tools/ngongo-park/ngongo-park.component';
 
 @NgModule({
 	declarations: [
@@ -18,7 +19,8 @@ import { APIsComponent } from './apis/apis.component';
 		RankingComponent,
 		TopPageComponent,
 		H2ComponentComponent,
-		APIsComponent
+		APIsComponent,
+		NgongoParkComponent
 	],
 	imports: [
 		BrowserModule,

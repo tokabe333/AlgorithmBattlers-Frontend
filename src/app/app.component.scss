@@ -3,9 +3,7 @@
 .main-content{
 	width: $disp-width;
 	height: 100%;
-	padding-top: calc(#{$header-height} + 10px);
 	margin-left: calc((100% - #{$disp-width}) / 2);
 	background-color: white;
-
 }
 

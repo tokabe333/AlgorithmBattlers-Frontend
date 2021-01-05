@@ -52,3 +52,10 @@
 		}
 	}
 }
+
+.dummy-header{
+	padding-top: $header-height;
+	height: 1px;
+	width: 100%;
+	display: block;
+}
