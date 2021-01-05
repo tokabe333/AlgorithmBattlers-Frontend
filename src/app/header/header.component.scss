@@ -3,8 +3,9 @@
 #header{
 	background-color: $main-color;
 
-	height: 50px;
+	height: $header-height;
 	width: 100%;
+	position: fixed;
 	
 	font-family: 'Josefin Sans', sans-serif;
 	border-bottom-style: double;

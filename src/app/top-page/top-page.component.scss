@@ -1,3 +1,27 @@
+* {
+	font-family: 'Josefin Sans', sans-serif;
+}
 h1 {
+	padding-top: 20px;
 	text-align: center;
+}
+
+.content-explain {
+	padding: 20px 0 50px 25px;
+	
+	.img-parent{
+		padding-top: 15px;
+		text-align: center;
+	}
+
+	.img-double{
+		text-align: center;
+
+		img {
+			padding-top: 15px;
+			width: 100%;
+			height: auto;
+			display:inline-block;
+		}
+	}
 }
