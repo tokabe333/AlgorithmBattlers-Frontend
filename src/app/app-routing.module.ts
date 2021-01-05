@@ -4,9 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { RankingComponent } from './ranking/ranking.component';
 import { SubmitComponent } from './submit/submit.component';
 import { TopPageComponent } from './top-page/top-page.component';
+import { APIsComponent } from "./apis/apis.component";
 
 const routes: Routes = [
 	{ path: "", redirectTo: "/top-page", pathMatch: "full" },
+	{ path: "apis", component: APIsComponent },
 	{ path: "top-page", component: TopPageComponent },
 	{ path: "submit", component: SubmitComponent },
 	{ path: "ranking", component: RankingComponent },

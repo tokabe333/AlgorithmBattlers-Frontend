@@ -8,6 +8,7 @@ import { SubmitComponent } from './submit/submit.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { TopPageComponent } from './top-page/top-page.component';
 import { H2ComponentComponent } from './tools/h2-component/h2-component.component';
+import { APIsComponent } from './apis/apis.component';
 
 @NgModule({
 	declarations: [
@@ -16,7 +17,8 @@ import { H2ComponentComponent } from './tools/h2-component/h2-component.componen
 		SubmitComponent,
 		RankingComponent,
 		TopPageComponent,
-		H2ComponentComponent
+		H2ComponentComponent,
+		APIsComponent
 	],
 	imports: [
 		BrowserModule,
