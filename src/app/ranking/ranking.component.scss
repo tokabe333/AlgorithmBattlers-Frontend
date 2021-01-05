@@ -1,23 +1,44 @@
 @import "../../styles.scss";
 
 table {
-	border-collapse: collapse;
 	width: 100%;
 
+	border-collapse: collapse;
+	
 	border: 1px solid #aaa;
+
+	th {
+		background-color: lighten($main-color, 20%);
+		text-align: center;
+		border: 1px solid #aaa;
+	}
+
 	td {
 		border: 1px solid #aaa;
 		padding: 4px;
 		word-break: break-all;
 	}
 
-	th {
-		background-color: lighten($main-color, 20%);
-		text-align: left;
-		border: 1px solid #aaa;
+	.th-ranking {
+		width: 12%;
 	}
+	.th-name {
+		width: 25%;
+	}
+	.th-score {
+		width: 18%;
+	}
+	.th-affiliation {
+		width: 28%;
+	}
+	.th-source { 
+		width: 17%;
+	}
+
 
 	tr:nth-child(odd){
 		background-color: lighten($main-color, 30%);
 	}
+
+
 }

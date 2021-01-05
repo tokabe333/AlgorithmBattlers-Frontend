@@ -3,14 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
+
 import { User } from './User';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class UserService {
-	//private url: string = "http://160.251.20.191/HoshideCompany/AIbattle/ranking";
-	private url: string = "http://localhost:8888/users"
+	private url: string = "http://160.251.20.191/HoshideCompany/AIbattle/ranking/";
+	//private url: string = "http://localhost:8888/users"
 	constructor(
 		private http: HttpClient
 	) { }
