@@ -1,0 +1,23 @@
+@import "../../styles.scss";
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+
+	border: 1px solid #aaa;
+	td {
+		border: 1px solid #aaa;
+		padding: 4px;
+		word-break: break-all;
+	}
+
+	th {
+		background-color: lighten($main-color, 20%);
+		text-align: left;
+		border: 1px solid #aaa;
+	}
+
+	tr:nth-child(odd){
+		background-color: lighten($main-color, 30%);
+	}
+}

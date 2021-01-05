@@ -1,1 +1,22 @@
-<p>ranking works!</p>
+<ul class="ranking">
+	<table>
+		<tr>
+			<th>ranking</th>
+			<th>name</th>
+			<th>score</th>
+			<th>affiliation</th>
+			<!-- <th>timestamp</th>
+			<th>submit_id</th> -->
+			<th>source</th>
+		</tr>
+		<tr *ngFor="let user of users">
+			<td>{{user.ranking}}</td>
+			<td>{{user.name}}</td>
+			<td>{{user.score}}</td>
+			<td>{{user.affiliation}}</td>
+			<!-- <td>{{user.timestamp}}</td>
+			<td>{{user.submit_id}}</td> -->
+			<td>{{user.source_url}}</td>
+		</tr>
+	</table>
+</ul>

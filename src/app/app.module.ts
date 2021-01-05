@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +12,8 @@ import { TopPageComponent } from './top-page/top-page.component';
 import { H2ComponentComponent } from './tools/h2-component/h2-component.component';
 import { APIsComponent } from './apis/apis.component';
 import { NgongoParkComponent } from './tools/ngongo-park/ngongo-park.component';
+
+import { UserService } from "./user.service";
 
 @NgModule({
 	declarations: [
@@ -24,9 +28,13 @@ import { NgongoParkComponent } from './tools/ngongo-park/ngongo-park.component';
 	],
 	imports: [
 		BrowserModule,
-		AppRoutingModule
+		AppRoutingModule,
+		FormsModule,
+		HttpClientModule,
 	],
-	providers: [],
+	providers: [
+		UserService,
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
