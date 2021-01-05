@@ -2,7 +2,9 @@
 
 .main-content{
 	width: $disp-width;
-	padding-left: calc((100% - #{$disp-width}) / 2);
-	
+	height: 100%;
+	margin-left: calc((100% - #{$disp-width}) / 2);
+	background-color: white;
 
 }
+

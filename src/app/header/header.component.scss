@@ -1,12 +1,15 @@
 @import "../../styles.scss";
 
 #header{
-	background-color: #8de672;
+	background-color: $main-color;
 
 	height: 50px;
 	width: 100%;
 	
 	font-family: 'Josefin Sans', sans-serif;
+	border-bottom-style: double;
+	border-bottom-color: #fff;
+	border-bottom-width: 10px;
 
 	.header-element{
 		height: inherit;
