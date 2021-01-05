@@ -8,7 +8,6 @@ import { APIsComponent } from "./apis/apis.component";
 
 const routes: Routes = [
 	{ path: "", redirectTo: "/top-page", pathMatch: "full" },
-	{ path: "/", redirectTo: "/top-page", pathMatch: "full" },
 	{ path: "HoshideCompany/AIbattle/unchi", redirectTo: "/top-page", pathMatch: "full" },
 	{ path: "apis", component: APIsComponent },
 	{ path: "top-page", component: TopPageComponent },
