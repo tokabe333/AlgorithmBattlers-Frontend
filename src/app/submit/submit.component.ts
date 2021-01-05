@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { HeaderService, headerService } from '../header/header.service';
+import { HeaderService } from '../header/header.service';
 
 @Component({
 	selector: 'app-submit',
