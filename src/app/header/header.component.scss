@@ -11,8 +11,8 @@
 	.header-element{
 		height: inherit;
 		width: $disp-width;
-		padding-left: calc(100% - (#{var} / 2));
-
+		padding-left: calc((100% - #{$disp-width}) / 2);
+		
 		#header-logo{
 			padding-left: 25px;
 			height: inherit;
