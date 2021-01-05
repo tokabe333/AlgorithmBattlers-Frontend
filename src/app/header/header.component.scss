@@ -28,6 +28,11 @@
 					width: auto;
 					height: auto;
 					max-height: 90%;
+					outline: 0;
+				}
+
+				img:hover{
+					cursor:pointer;
 				}
 			}
 			
@@ -35,18 +40,21 @@
 				height: inherit;
 				display: inline-block;
 				vertical-align: top;
-
-
 				li {
 					padding-left: 25px;
 					height: inherit;
 					font-size:x-large;
 					font-weight: bold;
 					display: inline-block;
+					outline: 0;
 
 					.header-dashboard{
 						margin-top: 15px;
 					}
+				}
+
+				li:hover {
+					cursor: pointer;
 				}
 			}
 		}
