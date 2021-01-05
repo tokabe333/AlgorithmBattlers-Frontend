@@ -13,27 +13,38 @@
 		width: $disp-width;
 		padding-left: calc((100% - #{$disp-width}) / 2);
 		
-		#header-logo{
-			padding-left: 25px;
+		nav {
 			height: inherit;
-			display: inline-block;
-			img {
-				padding-top: 2.5px;
-				width: auto;
-				height: auto;
-				max-height: 90%;
-			}
-		}
 
-		.header-dashboard {
-			padding-left: 25px;
-			margin-bottom: 5px;
-			height: 100%;
-			line-height: 100%;
-			font-size:x-large;
-			font-weight: bold;
-			display: inline-block;
-			vertical-align:middle;
+			#header-logo{
+				height: inherit;
+				display: inline-block;
+				img {
+					padding-top: 2.5px;
+					width: auto;
+					height: auto;
+					max-height: 90%;
+				}
+			}
+			
+			ul {
+				height: inherit;
+				display: inline-block;
+				vertical-align: top;
+
+
+				li {
+					padding-left: 25px;
+					height: inherit;
+					font-size:x-large;
+					font-weight: bold;
+					display: inline-block;
+
+					.header-dashboard{
+						margin-top: 15px;
+					}
+				}
+			}
 		}
 	}
 }
