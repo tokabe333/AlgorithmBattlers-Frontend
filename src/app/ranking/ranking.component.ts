@@ -10,6 +10,7 @@ import { UserService } from '../user.service';
 })
 export class RankingComponent implements OnInit {
 	public users!: User[]
+	public rankingUrl!: string;
 
 	constructor(
 		private userService: UserService
@@ -17,6 +18,7 @@ export class RankingComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.getHeroes();
+		this.rankingUrl = this.userService.url;
 	}
 
 	getHeroes(): void {

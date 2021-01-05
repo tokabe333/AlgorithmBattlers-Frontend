@@ -10,14 +10,14 @@ import { User } from './User';
 	providedIn: 'root'
 })
 export class UserService {
-	private url: string = "http://160.251.20.191/HoshideCompany/AIbattle/ranking/";
+	public url: string = "http://160.251.20.191/HoshideCompany/AIbattle";
 	//private url: string = "http://localhost:8888/users"
 	constructor(
 		private http: HttpClient
 	) { }
 
 	public getUsers(): Observable<User[]> {
-		return this.http.get<User[]>(`${this.url}`).pipe(catchError(this.handleError(`getUsers`, [])));
+		return this.http.get<User[]>(`${this.url}/ranking/`).pipe(catchError(this.handleError(`getUsers`, [])));
 	}
 
 	private handleError<T>(operation = "operation", result?: T) {
