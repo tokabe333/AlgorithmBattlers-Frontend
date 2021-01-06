@@ -12,4 +12,7 @@ export class H2ComponentComponent implements OnInit {
 	ngOnInit(): void {
 	}
 
+	init(text: string): void {
+		this.h2text = text;
+	}
 }

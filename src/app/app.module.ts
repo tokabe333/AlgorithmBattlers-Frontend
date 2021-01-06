@@ -27,7 +27,7 @@ import { PrettyprintComponentComponent } from './tools/prettyprint-component/pre
 		H2ComponentComponent,
 		APIsComponent,
 		NgongoParkComponent,
-		PrettyprintComponentComponent
+		PrettyprintComponentComponent,
 	],
 	imports: [
 		BrowserModule,

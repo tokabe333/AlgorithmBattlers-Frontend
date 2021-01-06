@@ -1,4 +1,4 @@
-import { Component, ComponentFactory, ComponentFactoryResolver, OnInit, ViewChild, ViewChildren, ViewContainerRef } from '@angular/core';
+import { Component, ComponentFactory, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef, AfterViewInit, ComponentRef } from '@angular/core';
 
 import { HeaderService } from '../header/header.service';
 import { PrettyprintComponentComponent } from '../tools/prettyprint-component/prettyprint-component.component';
@@ -10,7 +10,7 @@ import { IAPIs, APICodes, LangList } from './api_codes';
 	templateUrl: './apis.component.html',
 	styleUrls: ['./apis.component.scss']
 })
-export class APIsComponent implements OnInit {
+export class APIsComponent implements OnInit, AfterViewInit {
 	public apiCodes!: { [key: string]: IAPIs };
 	public langList!: string[];
 
@@ -18,13 +18,15 @@ export class APIsComponent implements OnInit {
 
 	prettyPrintComponent!: ComponentFactory<PrettyprintComponentComponent>;
 	h2Component!: ComponentFactory<H2ComponentComponent>;
-
 	@ViewChild("codes", { read: ViewContainerRef }) viewContainerRef!: ViewContainerRef;
+
+	h2_1!: ComponentRef<H2ComponentComponent>;
 
 	constructor(
 		private headerService: HeaderService,
 		private resolver: ComponentFactoryResolver
-	) { }
+	) {
+	}
 
 	ngOnInit(): void {
 		this.headerService.setMidasi("apis");
@@ -33,16 +35,21 @@ export class APIsComponent implements OnInit {
 
 		this.prettyPrintComponent = this.resolver.resolveComponentFactory(PrettyprintComponentComponent);
 		this.h2Component = this.resolver.resolveComponentFactory(H2ComponentComponent);
+
 	}
 
 	onChange(): void {
-		const h2_1 = this.viewContainerRef.createComponent(this.h2Component);
-		h2_1.instance.h2text = "Board Data Getter!";
+		this.h2_1 = this.viewContainerRef.createComponent(this.h2Component);
+		setTimeout(() => { this.h2_1.instance.h2text = "Board Data Getter!"; });
+
 
 		const code_1 = this.viewContainerRef.createComponent(this.prettyPrintComponent);
 		code_1.instance.lang = this.dropdownSelected;
 		code_1.instance.apiList = 1;
 
+	}
 
+	ngAfterViewInit() {
+		this.onChange();
 	}
 }
