@@ -15,6 +15,7 @@ import { APIsComponent } from './apis/apis.component';
 import { NgongoParkComponent } from './tools/ngongo-park/ngongo-park.component';
 
 import { UserService } from "./user.service";
+import { PrettyprintComponentComponent } from './tools/prettyprint-component/prettyprint-component.component';
 
 @NgModule({
 	declarations: [
@@ -25,7 +26,8 @@ import { UserService } from "./user.service";
 		TopPageComponent,
 		H2ComponentComponent,
 		APIsComponent,
-		NgongoParkComponent
+		NgongoParkComponent,
+		PrettyprintComponentComponent
 	],
 	imports: [
 		BrowserModule,
