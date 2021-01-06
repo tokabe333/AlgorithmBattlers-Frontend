@@ -5,8 +5,17 @@
 	padding-bottom: 20px;
 
 	h2 {
-		width: 50%;
+		width: 220px;
 		display: inline-block;
 		font-family: 'Josefin Sans', sans-serif;
 	}
+}
+
+.code-preview {
+	h2 {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		background-color: #000;
+	}
+
 }

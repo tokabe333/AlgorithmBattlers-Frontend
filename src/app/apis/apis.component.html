@@ -3,8 +3,6 @@
 	<select name="languages" [(ngModel)]="dropdownSelected" (change)="onChange()">
 		<option *ngFor=" let lang of langList" value="{{lang}}">{{lang}}</option>
 	</select>
-
-	{{dropdownSelected}}
 </div>
 
 <div class="code-preview" #codes>

@@ -3,6 +3,7 @@
 .main-content{
 	width: $disp-width;
 	height: 100%;
+	padding-top: 20px;
 	margin-left: calc((100% - #{$disp-width}) / 2);
 	background-color: white;
 }
