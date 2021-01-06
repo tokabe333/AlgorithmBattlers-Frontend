@@ -1,8 +1,8 @@
 import sys, os, re
 
 def add_dj(ngo):
-	ngo = "{% static'" + ngo + "' %}"
-	return ngo
+	return "{% static '" + ngo + "' %}"
+
 
 
 yaju = ""
@@ -26,6 +26,11 @@ with open(sys.argv[1], "r") as f:
 	html = html.replace(runtjs, runt2)
 	html = html.replace(plofjs, plof2)
 	html = html.replace(csscss, css2)
+
+	print(mainjs)
+	print(runtjs)
+	print(plofjs)
+	print(csscss)
 
 with open(sys.argv[1], "w") as f:
 	f.write(html)
