@@ -8,7 +8,7 @@
 		"build": "ng build",
 		"build-prod": "ng build --output-path ~/games/HoshideCompany/static --prod && mv ~/games/HoshideCompany/static/index.html ~/games/HoshideCompany/templates/AIbattle/index_unchi.html",
 		"build-prod-refactor": "ng build --output-path ~/games/HoshideCompany/static --prod && mv ~/games/HoshideCompany/static/index.html ~/games/HoshideCompany/templates/AIbattle/index_unchi.html && python3 convertHtmlToDjango.py ~/games/HoshideCompany/templates/AIbattle/index_unchi.html",
-		"build-unchi": "ng build --output-path C:/Users/tokab/Downloads/unchici --prod --watch",
+		"build-refactor": "ng build --output-path ~/games/HoshideCompany/static && mv ~/games/HoshideCompany/static/index.html ~/games/HoshideCompany/templates/AIbattle/index_unchi.html && python3 convertHtmlToDjango.py ~/games/HoshideCompany/templates/AIbattle/index_unchi.html",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
