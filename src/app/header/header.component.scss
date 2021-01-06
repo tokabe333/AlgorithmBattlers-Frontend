@@ -1,5 +1,6 @@
 @import "../../styles.scss";
 
+
 #header{
 	background-color: $main-color;
 
@@ -15,7 +16,8 @@
 	.header-element{
 		height: inherit;
 		width: $disp-width;
-		padding-left: calc((100% - #{$disp-width}) / 2);
+
+		margin-left: calc((100% - #{$disp-width}) / 2);
 		
 		nav {
 			height: inherit;
