@@ -13,14 +13,5 @@ $header-height: 50px;
 $main-color: #8de672;
 $background-color: #eee;
 
-
-$breakpoints: (
-	'sm' : 'screen and (min-width: 400px)',
-	'lg' : 'screen and (min-width: 1000px',	
-) !default;
-
-$smartphone: 1000;
-$pc-width: 30%;
-
 // $disp-width: 50% !default;
 $disp-width: max(480px, 30%);
