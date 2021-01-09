@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class HeaderService {
 	public nowMidasi!: string;
 	public midasi: { [key: string]: string; } = {
-		"apis": "Utility APIs over view!",
+		"apis": "Utility APIs Overview!",
 		"submit": "Submit Page Here!",
 		"ranking": "Tsuyo Tsuyo Ojisan Ranking!",
 		"top-page": "Welcome to NgoNgoPark!",

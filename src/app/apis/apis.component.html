@@ -1,15 +1,9 @@
 <div class="lang-selector-wrapper">
-	<h2>Chose language!</h2>
+	<h2>Choose Language!</h2>
 	<select name="languages" [(ngModel)]="dropdownSelected" (change)="onChange()">
 		<option *ngFor=" let lang of langList" value="{{lang}}">{{lang}}</option>
 	</select>
 </div>
 
 <div class="code-preview" #codes>
-	<!-- <app-h2-component [h2text]="'Board Data Getter!'"></app-h2-component>
-	<pre class="prettyprint linenums lang-cpp">{{apiCodes[dropdownSelected].getData}}</pre>
-	<app-prettyprint-component [lang]="dropdownSelected" [apiList]="1" #unchi1></app-prettyprint-component>
-
-	<app-h2-component [h2text]="'Board Data Poster!'"></app-h2-component>
-	<app-prettyprint-component [lang]="dropdownSelected" [apiList]="2" #unchi2></app-prettyprint-component> -->
 </div>
