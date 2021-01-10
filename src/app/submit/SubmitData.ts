@@ -3,3 +3,6 @@ export class SubmitData {
 	sources!: string;
 }
 
+export class ScoreData {
+	score!: number;
+}

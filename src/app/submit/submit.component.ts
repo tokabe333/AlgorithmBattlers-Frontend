@@ -7,7 +7,7 @@ import { Observable, of } from 'rxjs';
 
 import { HeaderService } from '../header/header.service';
 import { UserService } from '../user.service';
-import { SubmitData } from './SubmitData';
+import { ScoreData, SubmitData } from './SubmitData';
 
 @Component({
 	selector: 'app-submit',
@@ -46,8 +46,9 @@ export class SubmitComponent implements OnInit {
 			sources: form.sources,
 		}
 
-
-		this.userService.submitSource(Data).subscribe(() => { this.router.navigate(["ranking"]); });
+		let score = new ScoreData();
+		this.userService.submitSource(Data).subscribe(() => { this.userService.getScore().subscribe(scores => score = scores) });
+		alert(score);
 
 		alert("submitted!");
 	}
