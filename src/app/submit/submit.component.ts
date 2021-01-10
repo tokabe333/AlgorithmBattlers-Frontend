@@ -47,8 +47,9 @@ export class SubmitComponent implements OnInit {
 			sources: form.sources,
 		}
 
-		this.userService.submitSource(Data).subscribe(() => { this.userService.getScore().subscribe(scores => this.scoreData = scores); });
-		alert(this.scoreData + "___" + this.scoreData.score);
+		this.userService.submitSource(Data).toPromise().then(() => this.userService.getScore().subscribe(scores => this.scoreData = scores));
+		alert(this.scoreData);
+		alert(this.scoreData.score);
 
 		alert("submitted!");
 	}
