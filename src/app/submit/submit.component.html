@@ -6,8 +6,7 @@
 </div>
 
 <form action="." method="post">
-	<input type="hidden" name="csrfmiddlewaretoken"
-		value="jDpzKJMf2cujEE6aeyiwfoZCLXXDEonfuzciUT5oTbaw9McTE6V3SvT2MRhQrvIw">
+	{% csrf_token %}
 	<textarea name="sources" id="suorces"></textarea>
-	<input type="submit" vlaue="提出" id="submit-button">
+	<input type="submit" value="提出" id="submit-button">
 </form>
