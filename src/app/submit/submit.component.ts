@@ -19,6 +19,7 @@ export class SubmitComponent implements OnInit {
 	public dropdownSelected: string = "C++";
 	public submitSource!: string;
 
+	private scoreData!: ScoreData;
 
 	declare PR: any;
 
@@ -46,9 +47,8 @@ export class SubmitComponent implements OnInit {
 			sources: form.sources,
 		}
 
-		let score = new ScoreData();
-		this.userService.submitSource(Data).subscribe(() => { this.userService.getScore().subscribe(scores => score = scores); });
-		alert(score.score);
+		this.userService.submitSource(Data).subscribe(() => { this.userService.getScore().subscribe(scores => this.scoreData = scores); });
+		alert(this.scoreData + "___" + this.scoreData.score);
 
 		alert("submitted!");
 	}
