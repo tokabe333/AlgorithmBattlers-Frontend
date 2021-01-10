@@ -20,6 +20,7 @@ export class SubmitComponent implements OnInit {
 	public submitSource!: string;
 
 	private scoreData!: ScoreData;
+	private unchi!: any;
 
 	declare PR: any;
 
@@ -48,9 +49,9 @@ export class SubmitComponent implements OnInit {
 		}
 
 		//this.userService.submitSource(Data).toPromise().then(() => this.userService.getScore().subscribe(scores => { this.scoreData = scores; alert(scores); }));
-		this.userService.sumbmitAndGetScore(Data).subscribe(ngo => alert(ngo));
+		this.userService.sumbmitAndGetScore(Data).subscribe(ngo => this.unchi = ngo);
+		alert(this.unchi);
 		alert(this.scoreData);
-		alert(this.scoreData.score);
 
 		alert("submitted!");
 	}
