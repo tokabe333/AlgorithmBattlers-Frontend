@@ -30,12 +30,13 @@ export class APIsComponent implements OnInit, AfterViewInit, AfterViewChecked {
 
 	constructor(
 		private headerService: HeaderService,
-		private resolver: ComponentFactoryResolver
+		private resolver: ComponentFactoryResolver,
 	) {
 	}
 
 	ngOnInit(): void {
 		this.headerService.setMidasi("apis");
+
 		this.apiCodes = APICodes;
 		this.langList = LangList;
 

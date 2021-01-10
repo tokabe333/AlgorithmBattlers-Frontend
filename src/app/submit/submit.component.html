@@ -1,1 +1,13 @@
-<h1>unchi</h1>
+<div class="lang-selector-wrapper">
+	<h2>Choose Language!</h2>
+	<select name="languages" [(ngModel)]="dropdownSelected" (change)="onChange()">
+		<option *ngFor=" let lang of langList" value="{{lang}}">{{lang}}</option>
+	</select>
+</div>
+
+<form action="." method="post">
+	<input type="hidden" name="csrfmiddlewaretoken"
+		value="jDpzKJMf2cujEE6aeyiwfoZCLXXDEonfuzciUT5oTbaw9McTE6V3SvT2MRhQrvIw">
+	<textarea name="sources" id="suorces"></textarea>
+	<input type="submit" vlaue="提出" id="submit-button">
+</form>
