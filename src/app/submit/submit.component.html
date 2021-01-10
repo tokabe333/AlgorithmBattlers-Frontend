@@ -1,11 +1,11 @@
-<div class="lang-selector-wrapper">
-	<h2>Choose Language!</h2>
-	<select name="languages" [(ngModel)]="dropdownSelected" (change)="onChange()">
-		<option *ngFor=" let lang of langList" value="{{lang}}">{{lang}}</option>
-	</select>
-</div>
+<form #f="ngForm" action="." method="post" (ngSubmit)="onSubmit(f.value)">
+	<div class="lang-selector-wrapper">
+		<h2>Choose Language!</h2>
+		<select name="languages" [(ngModel)]="dropdownSelected" (change)="onChange()">
+			<option *ngFor=" let lang of langList" value="{{lang}}">{{lang}}</option>
+		</select>
+	</div>
 
-<form action="." method="post">
-	<textarea name="sources" id="suorces"></textarea>
+	<textarea name="sources" id="suorces" [(ngModel)]="submitSource"></textarea>
 	<input type="submit" value="提出" id="submit-button">
 </form>
