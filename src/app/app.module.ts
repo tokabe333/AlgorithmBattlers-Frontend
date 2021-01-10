@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule, HttpClientXsrfModule, HttpXsrfTokenExtractor } from '@angular/common/http';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,8 @@ import { NgongoParkComponent } from './tools/ngongo-park/ngongo-park.component';
 import { UserService } from "./user.service";
 import { PrettyprintComponentComponent } from './tools/prettyprint-component/prettyprint-component.component';
 import { LanguageComponent } from './tools/language/language.component';
+
+
 
 @NgModule({
 	declarations: [
