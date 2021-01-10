@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
@@ -27,6 +27,12 @@ export class UserService {
 
 	public getScore(): Observable<ScoreData> {
 		return this.http.get<ScoreData>(this.submitUrl).pipe(catchError(this.handleError("score data", new ScoreData())));
+	}
+
+	public sumbmitAndGetScore(data: SubmitData): Observable<any> {
+		return this.http.post<SubmitData>(this.submitUrl, data, { observe: `response` }).pipe(
+			map((res: HttpResponse<any>) => res.body)
+		);
 	}
 
 	private handleError<T>(operation = "operation", result?: T) {
