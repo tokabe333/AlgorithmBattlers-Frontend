@@ -18,6 +18,8 @@ export class SubmitComponent implements OnInit {
 	public dropdownSelected: string = "C++";
 	public submitSource!: string;
 
+
+	private url: string = "http://127.0.0.1:8888/users";
 	declare PR: any;
 
 	constructor(
@@ -43,7 +45,7 @@ export class SubmitComponent implements OnInit {
 			sources: form.sources,
 		}
 
-		this.http.post<SubmitData>("http://160.251.20.191/submit/", Data).pipe(catchError(this.handleError<SubmitData>("submit data"))).subscribe(() => { this.router.navigate(["ranking"]); });
+		this.http.post<SubmitData>(this.url, Data).pipe(catchError(this.handleError<SubmitData>("submit data"))).subscribe(() => { this.router.navigate(["ranking"]); });
 		alert("submitted!");
 	}
 
