@@ -6,6 +6,7 @@ import { catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 
 import { HeaderService } from '../header/header.service';
+import { UserService } from '../user.service';
 import { SubmitData } from './SubmitData';
 
 @Component({
@@ -28,6 +29,7 @@ export class SubmitComponent implements OnInit {
 		private router: Router,
 		private headerService: HeaderService,
 		private http: HttpClient,
+		private userService: UserService
 	) { }
 
 	ngOnInit(): void {
@@ -46,15 +48,9 @@ export class SubmitComponent implements OnInit {
 			sources: form.sources,
 		}
 
-		this.http.post<SubmitData>(this.url, Data).pipe(catchError(this.handleError<SubmitData>("submit data"))).subscribe(() => { this.router.navigate(["ranking"]); });
-		alert("submitted!");
-	}
 
-	private handleError<T>(operation = 'operation', result?: T) {
-		return (error: any): Observable<T> => {
-			console.error(error);
-			console.log(`${operation} failed: ${error.message}`);
-			return of(result as T);
-		}
+		this.userService.submitSource(Data).subscribe(() => { this.router.navigate(["ranking"]); });
+
+		alert("submitted!");
 	}
 }

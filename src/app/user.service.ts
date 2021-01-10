@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
+import { SubmitData } from './submit/SubmitData';
 
 import { User } from './User';
 
@@ -18,6 +19,10 @@ export class UserService {
 
 	public getUsers(): Observable<User[]> {
 		return this.http.get<User[]>(`${this.url}/ranking/`).pipe(catchError(this.handleError(`getUsers`, [])));
+	}
+
+	public submitSource(data: SubmitData): Observable<SubmitData> {
+		return this.http.post<SubmitData>(this.url, data).pipe(catchError(this.handleError<SubmitData>("submit data")))
 	}
 
 	private handleError<T>(operation = "operation", result?: T) {
