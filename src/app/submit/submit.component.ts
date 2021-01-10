@@ -20,8 +20,6 @@ export class SubmitComponent implements OnInit {
 	public submitSource!: string;
 
 
-	//private url: string = "http://127.0.0.1:8888/users";
-	private url: string = "http://160.251.20.191/HoshideCompany/AIbattle/api/submit";
 	declare PR: any;
 
 	constructor(

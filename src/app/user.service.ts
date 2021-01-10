@@ -12,6 +12,7 @@ import { User } from './User';
 })
 export class UserService {
 	public url: string = "http://160.251.20.191/HoshideCompany/AIbattle";
+	public submitUrl: string = "http://160.251.20.191/HoshideCompany/AIbattle/api/submit";
 	//private url: string = "http://localhost:8888/users"
 	constructor(
 		private http: HttpClient
@@ -22,7 +23,7 @@ export class UserService {
 	}
 
 	public submitSource(data: SubmitData): Observable<SubmitData> {
-		return this.http.post<SubmitData>(this.url, data).pipe(catchError(this.handleError<SubmitData>("submit data")))
+		return this.http.post<SubmitData>(this.submitUrl, data).pipe(catchError(this.handleError<SubmitData>("submit data")))
 	}
 
 	private handleError<T>(operation = "operation", result?: T) {
